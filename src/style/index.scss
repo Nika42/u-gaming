@@ -7,9 +7,12 @@ $container-max-widths: (
 	xl: 1040px,
 ) !default;
 
+@import "owl.carousel/src/scss/owl.carousel";
 @import "bootstrap/scss/bootstrap";
 @import "nouislider/distribute/nouislider";
 
 @import "./0-base/base";
 
 @import "./1-layout/layout";
+
+@import "./2-modules/modules";
