@@ -1,0 +1,110 @@
+@import "./variables";
+@import "./fonts";
+@import "./mixin";
+
+body {
+	font-family: $font-regular;
+	font-size: px2rem(14px);
+	background-color: lighten($color: $dark-2, $amount: 1);
+	color: #dedede;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-bold;
+	font-weight: bold;
+	color: #dadada;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		float: left;
+	}
+}
+
+a {
+	text-decoration: none;
+	transition: color 0.2s, background-color 0.2s;
+
+	&:hover {
+		color: $main-primary;
+		text-decoration: none;
+	}
+}
+
+button {
+	cursor: pointer;
+
+	&.primary {
+		border: 1px solid white;
+		outline: 0;
+		background-color: transparent;
+		color: white;
+		padding: 5px 30px;
+		border-radius: 100px;
+		font-size: px2rem(13px);
+		font-family: "Metropolis Light", "BPG Banner", sans-serif;
+		transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+		user-select: none;
+		display: flex;
+
+		&:hover {
+			background-color: $main-primary;
+			color: #333;
+			border-color: $main-primary;
+		}
+	}
+}
+
+.flex-20 {
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+
+.form-control {
+	border: none;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.btn-orange {
+	background: $gradient;
+	font-family: $font-bold;
+	color: white;
+
+	&:hover,
+	&:focus {
+		color: white;
+	}
+}
+
+.custom-checkbox {
+	label {
+		cursor: pointer;
+	}
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label:before {
+	border-color: darken($color: $color-7, $amount: 22);
+}
+
+.custom-control-label:before {
+	border-color: #353d4c;
+	background-color: transparent;
+}

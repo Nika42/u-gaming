@@ -1,0 +1,43 @@
+@import "./nav-pills";
+@import "./ad";
+@import "./game-filter";
+
+main {
+	margin-top: 17px;
+	// background-image: url("../images/wp4870459.jpg");
+	// background-position: top center;
+	// background-size: 100%;
+	// background-repeat: no-repeat;
+	// background-color: $dark-2;
+}
+
+.section-1 {
+	.card-t1:nth-child(-n + 5) {
+		margin-bottom: 16px;
+	}
+}
+
+.section-2 {
+	margin-top: 60px;
+	column.col-4 {
+		.post:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.column-title {
+	margin-bottom: 0;
+	font-family: $font-bold;
+}
+
+.column-meta {
+	color: #8e8e8e;
+	font-family: $font-regular;
+}
+
+#column-2 {
+	.card {
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,1443 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>U-GAMING</title>
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="components/owl.carousel/dist/assets/owl.carousel.min.css" />
+		<link
+			rel="stylesheet"
+			href="components/owl.carousel/dist/assets/owl.theme.default.min.css"
+		/>
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			/* html,
+		body {
+			overflow: hidden;
+			height: 100%;
+		}
+		.onLoading {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: #1a1e27;
+			z-index: 9999;
+		}
+		.loading-container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+			width: 100px;
+			height: 100px;
+			animation: animate 1s linear infinite;
+		}
+		.loading-container span {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background-color: #f00;
+			animation: rotate 1s linear infinite;
+		}
+		.loading-container span:nth-child(1) {
+			top: 0;
+			left: 0;
+			background-color: #f79f1f;
+		}
+		.loading-container span:nth-child(2) {
+			top: 0;
+			right: 0;
+			background-color: #12cbc4;
+		}
+		.loading-container span:nth-child(3) {
+			bottom: 0;
+			left: 0;
+			background-color: #ed4c67;
+		}
+		.loading-container span:nth-child(4) {
+			bottom: 0;
+			right: 0;
+			background-color: #a3cb38;
+		} */
+			@keyframes animate {
+				0% {
+					width: 100px;
+					height: 100px;
+				}
+				10% {
+					width: 100px;
+					height: 100px;
+				}
+				50% {
+					width: 150px;
+					height: 150px;
+				}
+				90% {
+					width: 100px;
+					height: 100px;
+				}
+				100% {
+					width: 100px;
+					height: 100px;
+				}
+			}
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				10% {
+					transform: rotate(0deg);
+				}
+				50% {
+					transform: rotate(90deg);
+				}
+				90% {
+					transform: rotate(90deg);
+				}
+				100% {
+					transform: rotate(90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="onLoading">
+			<div class="loading-container">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<header>
+			<div id="navbar">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<div class="container">
+						<a class="navbar-brand" href="#">GAMESTORE.GE</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-toggle="collapse"
+							data-target="#navbarCollapse"
+							aria-controls="navbarCollapse"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<form id="search-input">
+							<input type="text" placeholder="ჩაწერე საძიებო სიტყვა..." />
+							<i id="search-close" class="fal fa-times"></i>
+						</form>
+						<div class="collapse navbar-collapse" id="navbarCollapse">
+							<ul class="navbar-nav ml-auto align-items-center">
+								<li class="nav-item">
+									<a class="nav-link" href="#">მთავარი</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">ჩვენს შესახებ</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">კონტაქტი</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><i class="fal fa-search"></i></a>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="profileDropDown"
+										role="button"
+										data-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+										><i class="fal fa-user"></i
+									></a>
+									<div
+										class="dropdown-menu dropdown-menu-right"
+										aria-labelledby="profileDropDown"
+									>
+										<form>
+											<div class="form-group">
+												<label for="exampleInputEmail1">ელ.ფოსტა</label>
+												<input
+													type="email"
+													class="form-control form-control-sm"
+													id="exampleInputEmail1"
+													aria-describedby="emailHelp"
+												/>
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">პაროლი</label>
+												<input
+													type="password"
+													class="form-control form-control-sm"
+													id="exampleInputPassword1"
+												/>
+											</div>
+											<div
+												class="form-meta form-group d-flex justify-content-between"
+											>
+												<a href="#"><small>პაროლის აღდგენა</small></a>
+												<a href="#"><small>რეგისტრაცია</small></a>
+											</div>
+											<button type="submit" class="btn btn-orange">
+												შესვლა
+											</button>
+										</form>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+
+			<div class="owl-carousel">
+				<div
+					class="carousel-item-container"
+					style="background-image: url('../images/slider/slider-1.jpg');"
+				>
+					<div
+						class="container d-flex align-items-center justify-content-left"
+						style="height: 100%;"
+					>
+						<div class="row no-gutters">
+							<div class="carousel-body">
+								<h1 class="carousel-title">
+									METRO EXODUS-ის გამოსვლის თარიღი შეიცვალა
+								</h1>
+								<p class="carousel-text mb-3">
+									ზოგადად შევეჩვიეთ, რომ AAA თამაშები თითქმის არასდროს არ გამოდის
+									იმ თარიღში, რომელსაც ამბობენ კომპანიები თავდაპირველად. ხანდახან
+									გამოსვლის თარიღი რამდენიმე თვით და წლითაც კი იდება ხოლმე. ამ
+									შემთხვევაში კი, მადლობა უნდა ვთქვათ, რომ A4 Games-მაც გადაწყვიტა
+								</p>
+								<a href="#" class="carousel-btn primary">იხილეთ მეტი</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="carousel-item-container"
+					style="background-image: url('../images/slider/slider-2.jpg');"
+				>
+					<div
+						class="container d-flex align-items-center justify-content-left"
+						style="height: 100%;"
+					>
+						<div class="row no-gutters">
+							<div class="carousel-body">
+								<h1 class="carousel-title">GOD OF WAR გახდა წლის თამაში</h1>
+								<p class="carousel-text mb-3">
+									საკმაოდ სერიოზული კონკურენციის მიუხედავად, God of War გახდა 2018
+									წლის თამაში. სამწუხაროდ არ ვიცით, რამდენად აჯობა სხვა თამაშებს
+									მან, მაგრამ საბოლოო ტიტული ფლეისთეიშენის ექსკლუზივს შეხვდა.
+									საუკეთესოს წოდებასთან ერთად, თამაშმა მიიღო კიდევ ორი ჯილდო:
+									საუკეთესო რეჟისურა, საუკეთესო ექშენ/სათავგადასავლო თამაში.
+								</p>
+								<a href="#" class="carousel-btn primary">იხილეთ მეტი</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="carousel-item-container"
+					style="background-image: url('../images/slider/slider-3.jpg');"
+				>
+					<div
+						class="container d-flex align-items-center justify-content-left"
+						style="height: 100%;"
+					>
+						<div class="row no-gutters">
+							<div class="carousel-body">
+								<h1 class="carousel-title">
+									RED DEAD REDEMPTION 2-ის გეიმფლეი ტრეილერი
+								</h1>
+								<p class="carousel-text mb-3">
+									ვიდეოში წარმოდგენილია Red Dead Redemption 2-ის ინტერაქტიული
+									სამყარო. მოთამაშისთვის, მისიებისა და ბანდის გარდა, არის ძალიან
+									ბევრი აქტივობები, რომელიც არამარტო გასართობი და საინტერესოა,
+									უფრო აცოცხლებს ძველ დასავლეთს და უფრო მეტად აძლევს საშუალებას,
+									რომ ჩაეფლოს არტურ მორგანის ისტორიაში. უფრო განვითარებულია
+									თამაშის Dead Eye სისტემა, რომელსაც დაემატა ახალი ფუნქციები,
+									რომლებსაც გახსნით თამაშის მსვლელობასთან ერთად.
+								</p>
+								<a href="#" class="carousel-btn primary">იხილეთ მეტი</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="pills-tab">
+				<div class="container">
+					<ul class="nav nav-pills" role="tablist">
+						<li class="nav-item">
+							<a
+								class="nav-link active"
+								data-toggle="pill"
+								href="#pills-yvela"
+								role="tab"
+								aria-controls="pills-yvela"
+								aria-selected="true"
+								>ყველა</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								data-toggle="pill"
+								href="#pills-tamashebi"
+								role="tab"
+								aria-controls="pills-tamashebi"
+								aria-selected="false"
+								>თამაშები</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								data-toggle="pill"
+								href="#pills-statiebi"
+								role="tab"
+								aria-controls="pills-statiebi"
+								aria-selected="false"
+								>სტატიები</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								data-toggle="pill"
+								href="#pills-video-mimoxilvebi"
+								role="tab"
+								aria-controls="pills-video-mimoxilvebi"
+								aria-selected="false"
+								>ვიდეო მიმოხილვები</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								data-toggle="pill"
+								href="#pills-gameplay"
+								role="tab"
+								aria-controls="pills-gameplay"
+								aria-selected="false"
+								>გეიმფლეი</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								data-toggle="pill"
+								href="#pills-anonsi"
+								role="tab"
+								aria-controls="pills-anonsi"
+								aria-selected="false"
+								>ანონსი</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="section-1">
+				<div id="game-filter" class="mb-4">
+					<div class="container">
+						<div class="d-flex">
+							<div class="filter-row">
+								<div class="filter-title">
+									ჟანრი <i class="fal fa-angle-down"></i>
+								</div>
+								<div class="filter-selector">
+									<ul class="d-flex flex-column">
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-1"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-1"
+													>სტრატეგია</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-2"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-2"
+													>სათავგადასავლო</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-3"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-3"
+													>სიმულატორი</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-4"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-4"
+													>მოქმედებითი</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-5"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-5"
+													>რბოლა</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-6"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-6"
+													>ჩხუბები</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-7"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-7"
+													>3D</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-8"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-8"
+													>გრაფიკული</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-9"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-9"
+													>საბავშვო</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-10"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-10"
+													>სპორტი</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="cat-checkbox-11"
+												/>
+												<label
+													class="custom-control-label"
+													for="cat-checkbox-11"
+													>საშინელებათა</label
+												>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter-row">
+								<div class="filter-title">
+									ინტერფეისი <i class="fal fa-angle-down"></i>
+								</div>
+								<div class="filter-selector">
+									<ul class="d-flex flex-column">
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="lang-checkbox-1"
+												/>
+												<label
+													class="custom-control-label"
+													for="lang-checkbox-1"
+													>ქართული</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="lang-checkbox-2"
+												/>
+												<label
+													class="custom-control-label"
+													for="lang-checkbox-2"
+													>ინგლისური</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="lang-checkbox-3"
+												/>
+												<label
+													class="custom-control-label"
+													for="lang-checkbox-3"
+													>რუსული</label
+												>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter-row">
+								<div class="filter-title">
+									წელი <i class="fal fa-angle-down"></i>
+								</div>
+								<div class="filter-options">
+									<div class="d-flex">
+										<div class="d-flex align-items-center">
+											<input type="number" />
+											<span>-დან</span>
+										</div>
+										<div class="d-flex align-items-center ml-2">
+											<input type="number" />
+											<span>-მდე</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filter-row">
+								<div class="filter-title">
+									ოპერატიული მეხსიერება <i class="fal fa-angle-down"></i>
+								</div>
+								<div class="filter-selector selector-ram">
+									<ul class="d-flex flex-wrap">
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-1"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-1"
+													>512 მბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-2"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-2"
+													>1 გბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-3"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-3"
+													>2 გბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-4"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-4"
+													>3 გბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-5"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-5"
+													>4 გბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-6"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-6"
+													>6 გბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-7"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-7"
+													>8 გბ</label
+												>
+											</div>
+										</li>
+										<li>
+											<div class="custom-control custom-checkbox">
+												<input
+													type="checkbox"
+													class="custom-control-input"
+													id="ram-checkbox-8"
+												/>
+												<label
+													class="custom-control-label"
+													for="ram-checkbox-8"
+													>16 გბ</label
+												>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<h1 class="h2 column-title">
+						<i class="fal fa-layer-plus"></i> ახალი დამატებული
+					</h1>
+					<p class="column-meta">ახალი თამაშები ყველა კატეგორიიდან</p>
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-yvela" role="tabpanel">
+							<div class="row">
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-1.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-2.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Sunset Overdrive</h6>
+											<p class="card-text">Action (Shooter), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-3.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Hitman 2</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-4.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Blood Bowl 2</h6>
+											<p class="card-text">Strategy (Real-time), Sport</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-5.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">The Sims 4</h6>
+											<p class="card-text">Strategy, 3D, Simulator</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-6.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Earthfall: Invasion</h6>
+											<p class="card-text">Action, Shooter, 1st-Person</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-7.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">This War of Mine</h6>
+											<p class="card-text">Adventure, Indie, Simulation</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-8.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Just Cause 4</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-1.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-2.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Sunset Overdrive</h6>
+											<p class="card-text">Action (Shooter), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-3.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Hitman 2</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-4.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Blood Bowl 2</h6>
+											<p class="card-text">Strategy (Real-time), Sport</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-5.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">The Sims 4</h6>
+											<p class="card-text">Strategy, 3D, Simulator</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-6.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Earthfall: Invasion</h6>
+											<p class="card-text">Action, Shooter, 1st-Person</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-7.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">This War of Mine</h6>
+											<p class="card-text">Adventure, Indie, Simulation</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-8.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Just Cause 4</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="pills-tamashebi" role="tabpanel">
+							<div class="row">
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-1.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-2.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Sunset Overdrive</h6>
+											<p class="card-text">Action (Shooter), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-3.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Hitman 2</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-4.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Blood Bowl 2</h6>
+											<p class="card-text">Strategy (Real-time), Sport</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-5.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">The Sims 4</h6>
+											<p class="card-text">Strategy, 3D, Simulator</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-6.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Earthfall: Invasion</h6>
+											<p class="card-text">Action, Shooter, 1st-Person</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-7.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">This War of Mine</h6>
+											<p class="card-text">Adventure, Indie, Simulation</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-8.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Just Cause 4</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="pills-statiebi" role="tabpanel">
+							<div class="row">
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-1.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-2.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Sunset Overdrive</h6>
+											<p class="card-text">Action (Shooter), 3D</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-3.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Hitman 2</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-4.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Blood Bowl 2</h6>
+											<p class="card-text">Strategy (Real-time), Sport</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-5.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">The Sims 4</h6>
+											<p class="card-text">Strategy, 3D, Simulator</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-6.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Earthfall: Invasion</h6>
+											<p class="card-text">Action, Shooter, 1st-Person</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-7.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">This War of Mine</h6>
+											<p class="card-text">Adventure, Indie, Simulation</p>
+										</div>
+									</a>
+								</div>
+								<div class="col-lg-3 col-md-4 col-sm-6">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-8.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Just Cause 4</h6>
+											<p class="card-text">Action, Shooter, Open world</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-2">
+				<div class="container">
+					<div class="row">
+						<column class="col-lg-8">
+							<h1 class="h2 column-title">
+								<i class="fal fa-newspaper"></i> სტატიები
+							</h1>
+							<p class="column-meta">
+								იხილეთ უახლესი ამბები თამაშების გამოსვლასთან დაკავშირებით
+							</p>
+							<div class="row">
+								<div class="col-md-6 mb-3 mb-md-0">
+									<div class="card card-t3">
+										<img
+											class="card-img-top"
+											src="../images/posts/post-3.jpg"
+											alt="image"
+										/>
+										<div class="card-body">
+											<a href="#"
+												><h1 class="card-title h6">
+													ცნობილი გახდა BATTLEFIELD V-ის სისტემური
+													მოთხოვნილებები
+												</h1></a
+											>
+											<p class="card-text">
+												საქმე იმაშია, რომ რეკომედნირებული მოთხოვნილებები არც
+												ისეთი ძლიერია როგორსაც ელოდა ბევრი ადამიანი...
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 mb-md-0">
+									<div class="news d-flex">
+										<div class="news-img">
+											<a href="#"
+												><img src="../images/posts/post-1.jpg" alt="news"
+											/></a>
+										</div>
+										<div class="news-body">
+											<a href="#">
+												<h1 class="news-title h6">
+													უბისოფტმა დააანონსა პოსტ-აპოკალიპტური FAR CRY
+												</h1>
+											</a>
+											<div class="news-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="news d-flex">
+										<div class="news-img">
+											<a href="#"
+												><img src="../images/posts/post-4.jpg" alt="news"
+											/></a>
+										</div>
+										<div class="news-body">
+											<a href="#">
+												<h1 class="news-title h6">
+													METRO-ს შესახებ ფილმის გადაღება შეწყდა
+												</h1>
+											</a>
+											<div class="news-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="news d-flex">
+										<div class="news-img">
+											<a href="#"
+												><img src="../images/posts/post-5.jpg" alt="news"
+											/></a>
+										</div>
+										<div class="news-body">
+											<a href="#">
+												<h1 class="news-title h6">
+													რას უნდა ველოდოთ GAME AWARDS-გან
+												</h1>
+											</a>
+											<div class="news-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="news d-flex">
+										<div class="news-img">
+											<a href="#"
+												><img src="../images/posts/post-6.jpg" alt="news"
+											/></a>
+										</div>
+										<div class="news-body">
+											<a href="#">
+												<h1 class="news-title h6">
+													ცნობილია RED DEAD ONLINE-ს გამოსვლის თარიღები
+												</h1>
+											</a>
+											<div class="news-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</column>
+						<column id="column-2" class="col-lg-4">
+							<div class="ad assasins-creed mb-lg-4">
+								<div class="ad-container">
+									<h1>რეკლამის ადგილი</h1>
+									<p>
+										კომპანიების ბრენდად ფორმირება მნიშვნელოვნად არის
+										დამოკიდებული სარეკლამო კამპანიის სწორად დაგეგმვასა და
+										წარმართვაზე.
+									</p>
+									<a class="btn btn-dark" href="#">შეიძინე ახლა</a>
+								</div>
+							</div>
+						</column>
+						<div class="col-12 mt-4">
+							<div class="row">
+								<div class="col-lg-4 col-sm-6 mb-3 mb-md-0">
+									<div class="card card-t3">
+										<img
+											class="card-img-top"
+											src="../images/posts/post-5.jpg"
+											alt="image"
+										/>
+										<div class="card-body">
+											<a href="#"
+												><h1 class="card-title h6">
+													1$ მილიონიანი FORTNITE-ის ტურნირი ყველასთვის
+												</h1></a
+											>
+											<div class="card-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-sm-6 mb-3 mb-md-0">
+									<div class="card card-t3">
+										<img
+											class="card-img-top"
+											src="../images/posts/post-4.jpg"
+											alt="image"
+										/>
+										<div class="card-body">
+											<a href="#"
+												><h1 class="card-title h6">
+													რას უნდა ველოდოთ GAME AWARDS-გან
+												</h1></a
+											>
+											<div class="card-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-sm-6">
+									<div class="card card-t3">
+										<img
+											class="card-img-top"
+											src="../images/posts/post-5.jpg"
+											alt="image"
+										/>
+										<div class="card-body">
+											<a href="#"
+												><h1 class="card-title h6">
+													METRO-ს შესახებ ფილმის გადაღება შეწყდა
+												</h1></a
+											>
+											<div class="card-meta">
+												<div class="meta">
+													<i class="fal fa-clock"></i> 2 საათის წინ
+												</div>
+												<div class="meta">
+													<i class="fal fa-eye"></i> 2175
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="section-3">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">ჩვენს ჩესახებ</h1>
+							<p class="mb-0">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus,
+								consequatur? Sint eum corrupti aut optio asperiores harum vel
+								expedita ducimus saepe magni, distinctio hic dolorum necessitatibus,
+								quo tempore. Ipsam, non.
+							</p>
+						</div>
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">ნავიგაცია</h1>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#">სტატიები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">თამაშები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">განხილვები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">კონტაქტი</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">მედია</h1>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#">სქრინები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">თრეილერი</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">გეიმფლეი</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">გამოგვყევი</h1>
+							<ul class="nav flex-row social-media">
+								<li class="nav-item">
+									<a class="nav-link" href="#"
+										><i class="fab fa-facebook-f"></i
+									></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"
+										><i class="fab fa-instagram"></i
+									></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-4">
+				<div class="container">
+					&COPY; Copyrights All Rights Reserved
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>

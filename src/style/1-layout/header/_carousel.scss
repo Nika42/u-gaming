@@ -1,0 +1,86 @@
+.carousel-item-container {
+	width: 100%;
+	height: 728px; //770px
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+	.carousel-body {
+		width: 60%;
+		position: relative;
+		z-index: 2;
+		color: white;
+
+		.carousel-title {
+			color: white;
+			font-family: $font-bold;
+			text-indent: -1px;
+		}
+
+		.carousel-text {
+			width: 75%;
+			font-size: 14px;
+			color: #8a8d96;
+			font-family: $font-regular;
+		}
+
+		.carousel-btn {
+			padding: 7px 20px;
+			border-radius: 0;
+			border: 1px solid $color-7;
+			font-family: $font-bold;
+			color: white;
+			font-size: px2rem(13px);
+			display: inline-block;
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+
+	&:before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(60deg, rgba(26, 30, 39, 0.9) 50%, rgba(26, 30, 39, 0.3) 100%);
+		z-index: 1;
+	}
+}
+
+.owl-dots {
+	position: absolute;
+	left: 50%;
+	bottom: 100px;
+	transform: translateX(-50%);
+
+	button.owl-dot {
+		display: inline-block;
+		padding: 1px 6px !important;
+		outline: none;
+		span {
+			width: 29px;
+			height: 8px;
+			background-color: rgba(26, 30, 39, 0.5);
+			display: block;
+			border: 1px solid rgba($color: #363940, $alpha: 0.8);
+		}
+		&.active span {
+			background-color: $color-7;
+			border-color: transparent;
+		}
+	}
+}
+
+#pills-tab {
+	margin-top: -70px;
+	position: relative;
+	z-index: 1;
+}
+
+@import "./navbar";
+
+// @import './header/videos';
