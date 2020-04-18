@@ -1,6 +1,7 @@
 .carousel-item-container {
 	width: 100%;
-	height: 728px; //770px
+	height: 100vh;
+	min-height: 550px;
 	background-position: center;
 	background-size: cover;
 	position: relative;
@@ -51,7 +52,7 @@
 	}
 }
 
-.owl-dots {
+#main-carousel .owl-dots {
 	position: absolute;
 	left: 50%;
 	bottom: 100px;
@@ -76,11 +77,6 @@
 }
 
 #pills-tab {
-	margin-top: -70px;
 	position: relative;
 	z-index: 1;
 }
-
-@import "./navbar";
-
-// @import './header/videos';

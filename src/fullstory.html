@@ -1,0 +1,616 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=576, initial-scale=1, shrink-to-fit=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>U-GAMING</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			html,
+			body {
+				overflow: hidden;
+				height: 100%;
+			}
+			.onLoading {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				background-color: #1a1e27;
+				z-index: 9999;
+			}
+			.loading-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(45deg);
+				width: 100px;
+				height: 100px;
+				animation: animate 1s linear infinite;
+			}
+			.loading-container span {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background-color: #f00;
+				animation: rotate 1s linear infinite;
+			}
+			.loading-container span:nth-child(1) {
+				top: 0;
+				left: 0;
+				background-color: #f79f1f;
+			}
+			.loading-container span:nth-child(2) {
+				top: 0;
+				right: 0;
+				background-color: #12cbc4;
+			}
+			.loading-container span:nth-child(3) {
+				bottom: 0;
+				left: 0;
+				background-color: #ed4c67;
+			}
+			.loading-container span:nth-child(4) {
+				bottom: 0;
+				right: 0;
+				background-color: #a3cb38;
+			}
+			@keyframes animate {
+				0% {
+					width: 100px;
+					height: 100px;
+				}
+				10% {
+					width: 100px;
+					height: 100px;
+				}
+				50% {
+					width: 150px;
+					height: 150px;
+				}
+				90% {
+					width: 100px;
+					height: 100px;
+				}
+				100% {
+					width: 100px;
+					height: 100px;
+				}
+			}
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				10% {
+					transform: rotate(0deg);
+				}
+				50% {
+					transform: rotate(90deg);
+				}
+				90% {
+					transform: rotate(90deg);
+				}
+				100% {
+					transform: rotate(90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="onLoading">
+			<div class="loading-container">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<header>
+			<nav class="navbar py-3 navbar-expand-lg navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="#">GAMESTORE.GE</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarCollapse"
+						aria-controls="navbarCollapse"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<form id="search-input" class="mb-0 mt-2 mt-lg-0 ml-lg-3">
+						<input type="text" placeholder="ჩაწერე საძიებო სიტყვა..." />
+						<i id="search-close" class="fal fa-times"></i>
+					</form>
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+						<ul class="navbar-nav mb-2 mb-lg-0 ml-lg-auto align-items-lg-center">
+							<li class="nav-item">
+								<a class="nav-link" href="#">მთავარი</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">ჩვენს შესახებ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">კონტაქტი</a>
+							</li>
+							<li id="search-init" class="nav-item">
+								<a class="nav-link" href="#"
+									><i class="fal fa-search"></i
+									><span class="ml-2 d-lg-none">ძებნა</span></a
+								>
+							</li>
+							<li class="nav-item dropdown dropdown-keep-open">
+								<a
+									class="nav-link dropdown-toggle without-caret"
+									href="#"
+									id="profileDropDown2"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+									><i class="fal fa-user"></i
+									><span class="ml-2 d-lg-none">პროფილი</span></a
+								>
+								<div
+									class="dropdown-menu dropdown-menu-right"
+									aria-labelledby="profileDropDown2"
+								>
+									<h4 class="text-white text-lg-center px-4 mb-2">
+										Gamer_547
+									</h4>
+									<div class="dropdown-divider"></div>
+									<a
+										class="dropdown-item"
+										href="https://getbootstrap.com/docs/4.4/utilities/text/"
+										target="_blank"
+										>ადმინპანელი</a
+									>
+									<a class="dropdown-item" href="#">ახალი თამაშები</a>
+									<a class="dropdown-item" href="#">რჩეული თამაშები</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">გამოსვლა</a>
+									<!-- <form>
+											<div class="form-group">
+												<label for="exampleInputEmail1">ელ.ფოსტა</label>
+												<input
+													type="email"
+													class="form-control form-control-sm"
+													id="exampleInputEmail1"
+													aria-describedby="emailHelp"
+												/>
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">პაროლი</label>
+												<input
+													type="password"
+													class="form-control form-control-sm"
+													id="exampleInputPassword1"
+												/>
+											</div>
+											<div
+												class="form-meta form-group d-flex justify-content-between"
+											>
+												<a href="#"><small>პაროლის აღდგენა</small></a>
+												<a href="#"><small>რეგისტრაცია</small></a>
+											</div>
+											<button type="submit" class="btn btn-orange">
+												შესვლა
+											</button>
+										</form> -->
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="section-1">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- <div id="player-container" class="mb-4">
+								<nav>
+									<div class="nav nav-tabs" id="nav-tab" role="tablist">
+										<a
+											class="nav-item nav-link active"
+											id="nav-home-tab"
+											data-toggle="tab"
+											href="#nav-home"
+											role="tab"
+											aria-controls="nav-home"
+											aria-selected="true"
+											>Gameplay</a
+										>
+										<a
+											class="nav-item nav-link"
+											id="nav-profile-tab"
+											data-toggle="tab"
+											href="#nav-profile"
+											role="tab"
+											aria-controls="nav-profile"
+											aria-selected="false"
+											>Trailer</a
+										>
+									</div>
+								</nav>
+								<div class="tab-content" id="nav-tabContent">
+									<div
+										class="tab-pane fade show active"
+										id="nav-home"
+										role="tabpanel"
+										aria-labelledby="nav-home-tab"
+									>
+										<iframe
+											width="100%"
+											height="380"
+											src="https://www.youtube.com/embed/dKpL_h7va4w"
+											frameborder="0"
+											allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen
+										></iframe>
+									</div>
+									<div
+										class="tab-pane fade"
+										id="nav-profile"
+										role="tabpanel"
+										aria-labelledby="nav-profile-tab"
+									>
+										<iframe
+											width="100%"
+											height="380"
+											src="https://www.youtube.com/embed/0E44DClsX5Q"
+											frameborder="0"
+											allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen
+										></iframe>
+									</div>
+								</div>
+							</div> -->
+							<div id="post-container">
+								<div class="row">
+									<div class="col-3">
+										<div class="sticky-top">
+											<img
+												id="game-poster"
+												class="img-fluid"
+												src="../images/games/game-1.jpg"
+											/>
+											<a
+												id="download-btn"
+												href="#"
+												class="d-flex justify-content-center align-items-center btn btn-orange btn-block py-2 mt-3"
+												><i class="fal fa-cloud-download-alt mr-2"></i>
+												გადმოწერა</a
+											>
+										</div>
+									</div>
+									<div class="col-9">
+										<div id="post-info" class="mb-3">
+											<h4 id="game-title" class="column-title mb-0">
+												Darksiders III
+											</h4>
+											<div class="divider"></div>
+											<div id="post-info-wrap">
+												<div class="row">
+													<div class="col-6">
+														<ul
+															id="game-info"
+															class="list-unstyled mb-0"
+														>
+															<li>
+																<div class="row-title">
+																	გამოსვლის წელი:
+																</div>
+																<div class="row-body">2018</div>
+															</li>
+															<li>
+																<div class="row-title">ჟანრი:</div>
+																<div class="row-body">
+																	<a href="#">მოქმედებითი</a>,
+																	<a href="#">3D</a>,
+																	<a href="#">RPG</a>
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	გამოცემის ავტორი:
+																</div>
+																<div class="row-body">
+																	R.G. Revenants
+																</div>
+															</li>
+															<li>
+																<div class="row-title">ვერსია:</div>
+																<div class="row-body">1.4</div>
+															</li>
+															<li>
+																<div class="row-title">წამალი:</div>
+																<div class="row-body">
+																	ჩაკერილია
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	ინტერფეისის ენა:
+																</div>
+																<div class="row-body">
+																	ინგლისური, რუსული და სხვა
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	გახმოვანების ენა:
+																</div>
+																<div class="row-body">
+																	ინგლისური, რუსული და სხვა
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	შემქნნელი:
+																</div>
+																<div class="row-body">
+																	Gunfire Games
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="col-6">
+														<ul id="game-requirements" class="mb-0">
+															<li>
+																<div class="row-title">
+																	ოპერაციული სისტემა:
+																</div>
+																<div class="row-body">
+																	Windows 7/8.1/10 (x64)
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	პროცესორი:
+																</div>
+																<div class="row-body">
+																	AMD FX-8320 / Intel i5-4690K
+																	(3,5 GHz)
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	ოპერატიული მეხსიერება:
+																</div>
+																<div class="row-body">8 გბ</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	ვიდეო ბარათი:
+																</div>
+																<div class="row-body">
+																	Geforce 660, DirectX 11,
+																</div>
+															</li>
+															<li>
+																<div class="row-title">
+																	ადგილი დისკზე:
+																</div>
+																<div class="row-body">23 გბ</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="divider"></div>
+											<div id="game-descr-wrap">
+												<h6 class="font-weight-normal mb-0">აღწერა:</h6>
+												<p id="game-description" class="mb-0">
+													Darksiders III - დიდი ხნის მოლოდინის შემდეგ
+													Darksiders-ის ვერსიის 3-ე თავი თქვენს წინაშე.
+													3-ე ნაწილში თქვენ დაბრუნდებით მკვდარ დედამიწაზე
+													მრისხანების მხედრის როლში, რომელიც აპირებს რომ
+													იპოვოს და გაანადგუროს 7 მომაკვდინებელი ცოდვა.
+													ყველაზე იდუმალებით მოცულმა მრისხანების მხედარმა
+													უნდა შესძლოს და აღადგინოს ძალების ბალანსი
+													დედამიწაზე...
+												</p>
+											</div>
+										</div>
+										<div id="game-screens">
+											<div id="game-screens-wrap">
+												<div class="row">
+													<div class="col-3">
+														<img
+															src="./images/screenshots/screen-1.jpg"
+															class="img-fluid"
+														/>
+													</div>
+													<div class="col-3">
+														<img
+															src="./images/screenshots/screen-2.jpg"
+															class="img-fluid"
+														/>
+													</div>
+													<div class="col-3">
+														<img
+															src="./images/screenshots/screen-3.jpg"
+															class="img-fluid"
+														/>
+													</div>
+													<div class="col-3">
+														<img
+															src="./images/screenshots/screen-4.jpg"
+															class="img-fluid"
+														/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="related-games">
+								<h5 class="related-games-heading">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+										<path
+											d="M638.59 368.22l-33.37-211.59c-8.86-50.26-48.4-90.77-100.66-103.13h-.07a803.19 803.19 0 0 0-369 0C83.17 65.86 43.64 106.36 34.78 156.63L1.41 368.22C-8.9 426.73 38.8 480 101.51 480c49.67 0 93.77-30.07 109.48-74.64l7.52-21.36h203l7.49 21.36C444.72 449.93 488.82 480 538.49 480c62.71 0 110.41-53.27 100.1-111.78zM280 236a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52h-52a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm152 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"
+										/>
+									</svg>
+									მსგავსი თამაშები
+								</h5>
+								<div id="related-carousel" class="owl-carousel owl-theme">
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-1.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-2.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-3.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-4.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-5.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+									<a href="#" class="card card-t1">
+										<img
+											class="card-img-top"
+											src="../images/games/game-6.jpg"
+											alt=""
+										/>
+										<div class="card-body text-center">
+											<h6 class="card-title">Republique Remastered</h6>
+											<p class="card-text">Sport (Soccer), 3D</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-3">2</div> -->
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="section-3">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">ჩვენს ჩესახებ</h1>
+							<p class="mb-0">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus,
+								consequatur? Sint eum corrupti aut optio asperiores harum vel
+								expedita ducimus saepe magni, distinctio hic dolorum necessitatibus,
+								quo tempore. Ipsam, non.
+							</p>
+						</div>
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">ნავიგაცია</h1>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#">სტატიები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">თამაშები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">განხილვები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">კონტაქტი</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">მედია</h1>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#">სქრინები</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">თრეილერი</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">გეიმფლეი</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-sm-6 mb-3 mb-lg-0">
+							<h1 class="col-title h5">გამოგვყევი</h1>
+							<ul class="nav flex-row social-media">
+								<li class="nav-item">
+									<a class="nav-link" href="#"
+										><i class="fab fa-facebook-f"></i
+									></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"
+										><i class="fab fa-instagram"></i
+									></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-4">
+				<div class="container">
+					&COPY; Copyrights All Rights Reserved
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>

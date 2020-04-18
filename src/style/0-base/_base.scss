@@ -9,6 +9,11 @@ body {
 	color: #dedede;
 }
 
+::selection {
+	background-color: $color-7;
+	color: white;
+}
+
 h1,
 h2,
 h3,
@@ -22,26 +27,16 @@ h6,
 .h5,
 .h6 {
 	font-family: $font-bold;
-	font-weight: bold;
 	color: #dadada;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-
-	li {
-		list-style: none;
-		float: left;
-	}
-}
-
 a {
+	color: $color-7;
 	text-decoration: none;
 	transition: color 0.2s, background-color 0.2s;
 
 	&:hover {
-		color: $main-primary;
+		color: $color-7;
 		text-decoration: none;
 	}
 }
@@ -63,9 +58,9 @@ button {
 		display: flex;
 
 		&:hover {
-			background-color: $main-primary;
+			background-color: $color-7;
 			color: #333;
-			border-color: $main-primary;
+			border-color: $color-7;
 		}
 	}
 }
@@ -107,4 +102,39 @@ button {
 .custom-control-label:before {
 	border-color: #353d4c;
 	background-color: transparent;
+}
+
+.dropdown-menu {
+	background-color: $dark-2;
+	color: #ececec;
+
+	a {
+		color: #ececec;
+	}
+}
+
+.dropdown-item {
+	padding: 0.5rem 1.5rem;
+
+	&:hover,
+	&:focus {
+		color: white;
+		background-color: lighten($color: $dark-2, $amount: 5);
+	}
+}
+
+.dropdown-divider {
+	border-color: lighten($color: $dark-2, $amount: 5);
+}
+
+.without-caret::after {
+	display: none;
+}
+
+svg {
+	vertical-align: baseline;
+
+	path {
+		fill: white;
+	}
 }

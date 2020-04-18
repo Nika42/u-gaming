@@ -1,0 +1,133 @@
+.navbar-toggler {
+	padding: 0;
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.navbar-dark .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+@include media-breakpoint-down("sm", $grid-breakpoints) {
+	.dropdown-menu {
+		border: none;
+	}
+
+	.carousel-item-container {
+		min-height: initial;
+		height: 450px;
+
+		.carousel-body {
+			width: auto;
+
+			.carousel-title {
+				font-size: 28px;
+			}
+		}
+	}
+
+	.owl-carousel {
+		margin-top: 72px;
+	}
+	.owl-dots {
+		bottom: 40px;
+	}
+
+	.nav-pills {
+		.nav-item {
+			width: 50%;
+			margin-left: 0 !important;
+		}
+
+		.nav-link {
+			border-radius: 0;
+		}
+	}
+
+	.filter-row {
+		width: 50%;
+
+		.filter-title {
+			border: none;
+		}
+
+		&:nth-child(1) .filter-title,
+		&:nth-child(2) .filter-title {
+			border-bottom: 1px solid #252b38;
+		}
+
+		&:nth-child(2) .filter-title,
+		&:nth-child(4) {
+			border-left: 1px solid #252b38;
+		}
+	}
+
+	.filter-row:last-child .filter-title {
+		border-right: none;
+	}
+}
+
+@include media-breakpoint-down("md", $grid-breakpoints) {
+	.filter-row {
+		&.is-open {
+			background-color: lighten($color: $filter-background, $amount: 3);
+
+			.filter-selector,
+			.filter-options {
+				display: block;
+			}
+		}
+	}
+}
+@include media-breakpoint-up("xs", $grid-breakpoints) {
+	.card-t2,
+	.card-t3 {
+		.card-img-top {
+			height: 235px;
+		}
+	}
+}
+
+@include media-breakpoint-up("md", $grid-breakpoints) {
+}
+
+@include media-breakpoint-up("lg", $grid-breakpoints) {
+	.navbar {
+		background-color: $darkblue;
+
+		.navbar-nav {
+			> .nav-item {
+				padding: 0 15px 0 15px;
+
+				> .nav-link {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	#pills-tab {
+		margin-top: -70px;
+	}
+
+	.card-t2,
+	.card-t3 {
+		.card-img-top {
+			height: 185px;
+		}
+	}
+
+	.filter-row {
+		&:hover {
+			background-color: lighten($color: $filter-background, $amount: 3);
+
+			.filter-selector,
+			.filter-options {
+				display: block;
+			}
+		}
+	}
+}

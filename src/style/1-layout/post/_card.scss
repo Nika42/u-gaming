@@ -1,6 +1,6 @@
 .card {
 	border: none;
-	background-color: $dark-2h;
+	background-color: $darkblue;
 
 	.card-text {
 		color: #8e8e8e;
@@ -22,7 +22,7 @@
 		}
 		.badge {
 			padding: 3px 13px;
-			background-color: $main_primary;
+			background-color: $color-7;
 		}
 	}
 
@@ -66,7 +66,7 @@
 		transition: color 0.2s;
 
 		&:hover {
-			color: $main_primary;
+			color: $color-7;
 		}
 	}
 
@@ -90,7 +90,7 @@
 .card-t2,
 .card-t3 {
 	.card-img-top {
-		height: 185px;
+		object-fit: cover;
 	}
 }
 
@@ -106,13 +106,13 @@
 		padding-right: 1em;
 		transition: color 0.2s;
 		&:hover {
-			color: $main_primary;
+			color: $color-7;
 		}
 	}
 }
 .card-t3 {
 	.card-body > a:hover h1 {
-		color: $main_primary;
+		color: $color-7;
 	}
 	.card-meta .meta {
 		display: inline-block;

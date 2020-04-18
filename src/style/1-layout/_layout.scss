@@ -1,9 +1,9 @@
+@import "./header/header";
+@import "./main/main";
+@import "./footer/footer";
+
 @import "./post/card";
 @import "./post/game";
 @import "./post/news";
 
-@import "./header/carousel";
-
-@import "./main/main";
-
-@import "./footer/footer";
+@import "./single/single";

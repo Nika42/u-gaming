@@ -1,27 +1,11 @@
-$filter-background: #1e232d;
-$filter-row-border-color: lighten(
-	$color: $filter-background,
-	$amount: 3.5,
-);
-
 #game-filter {
 	background-color: $filter-background;
 }
 
 .filter-row {
 	font-family: $font-pills;
-
 	transition: background 0.3s;
 	position: relative;
-
-	&:hover {
-		background-color: lighten($color: $filter-background, $amount: 3);
-
-		.filter-selector,
-		.filter-options {
-			display: block;
-		}
-	}
 
 	&:last-child .filter-title {
 		border-right: 1px solid $filter-row-border-color;

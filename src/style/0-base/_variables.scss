@@ -6,19 +6,22 @@ $color-5: #b2bb20;
 $color-6: #1c6a7e;
 $color-7: #ee390e;
 
-$main_primary: #ffd800;
 $gradient: linear-gradient(to top right, rgb(237, 27, 36) 0%, $color-7 100%);
 $gradient-hover: linear-gradient(to top right, rgb(202, 29, 38) 0%, $color-7 100%);
 $gradient-2: linear-gradient(to top right, $color-4 0%, #959638 100%);
 
-$main_red: #ed1b24;
-
-$dark: #151515;
-
+$darkblue: #262a35;
 $dark-2: #1a1e27;
-$dark-2h: #262a35;
+
+$footer-bg: #0d1017;
 
 $font-navbar: "Pangram Light", "BPG Banner Caps", sans-serif;
 $font-regular: "Pangram", "BPG Banner", sans-serif;
 $font-bold: "Pangram Bold", "BPG Banner Caps", sans-serif;
 $font-pills: "Pangram", "BPG Banner Caps", sans-serif;
+
+$filter-background: #1e232d;
+$filter-row-border-color: lighten(
+	$color: $filter-background,
+	$amount: 3.5,
+);
